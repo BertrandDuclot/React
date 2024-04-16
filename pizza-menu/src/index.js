@@ -78,12 +78,14 @@ function Menu() {
     <main className="menu">
       <h2>Our menu.</h2>
 
-      {numPizzas > 0 && (
+      {numPizzas > 0 ? (
         <ul className="pizzas">
           {pizzas.map((pizza) => (
             <Pizza pizzaObj={pizza} key={pizza.name} />
           ))}
         </ul>
+      ) : (
+        <p>Still working on the menu, please come back later.</p>
       )}
     </main>
 
@@ -116,8 +118,14 @@ function Footer() {
   // Short-circuiting
   return (
     <footer className="footer">
+      {isOpen ? (
+        <p>We're open until {closeHour}:00. Come visit us or order online.</p>
+      ) : (
+        <p>
+          We're open between {openHour}:00 and {closeHour}:00
+        </p>
+      )}
       <div className="order">
-        {isOpen && <p>We're open until {closeHour}:00. Come visit us or order online.</p>}
         <button className="btn">Order</button>
       </div>
     </footer>
