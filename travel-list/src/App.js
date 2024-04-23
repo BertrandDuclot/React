@@ -66,6 +66,7 @@ function Form({ onAddItems }) {
   );
 }
 
+// utilise le modèle de Item
 function PackingList({ items, onDeleteItem }) {
   return (
     <div className="list">
