@@ -1,1 +1,1 @@
-This is a series of mini-projects and exercices to learn React.
+This is a series of projects and exercices to learn React.
